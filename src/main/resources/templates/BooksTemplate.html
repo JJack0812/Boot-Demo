@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+</head>
+<body class="container">
+<table class= "table table-striped ">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+    </tr>
+    <tr th:each="item :${list}">
+        <td th:text="${item.id}">id</td>
+        <td th:text="${item.name}">id</td>
+    </tr>
+</table>
+</body>
+<script>
+    var a=${list};
+</script>
+</html>

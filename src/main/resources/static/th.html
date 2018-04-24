@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>认识 ThymeLeaf 模板引擎</title>
+</head>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+    $(function () {
+        $.ajax({
+            type :"get",
+            async:false,
+            url : "http://localhost:8080/cjs/book",
+            success:function (data) {
+                console.log(data)
+                $("#pp").text(data[1].id)
+            }
+        })
+
+    })
+</script>
+<body>
+<h1 th:text="${model}">Hello World</h1>
+<p>fsdfsd啊啊啊sf</p>
+<p id ="pp"></p>
+</body>
+</html>
